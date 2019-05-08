@@ -10,7 +10,7 @@ Installation
 Add this package to your pubspec.yaml file:
 
     dependencies:
-      route: any
+      route2: any
 
 Then, run `pub get` to download and link in the package.
 
@@ -36,7 +36,7 @@ Example (urls.dart):
 ```dart
 library urls;
 
-import 'package:route/url_pattern.dart';
+import 'package:route2/url_pattern.dart';
 
 final homeUrl = new UrlPattern(r'/');
 final articleUrl = new UrlPattern(r'/article/(\d+)');
@@ -60,7 +60,7 @@ Example (client.dart):
 ```dart
 library client;
 
-import 'package:route/client.dart';
+import 'package:route2/client.dart';
 
 main() {
   var router = new Router()
@@ -88,8 +88,8 @@ against `UrlPatterns`.
 
 ```dart
 import 'urls.dart';
-import 'package:route/server.dart';
-import 'package:route/pattern.dart';
+import 'package:route2/server.dart';
+import 'package:route2/pattern.dart';
 
 HttpServer.bind().then((server) {
   var router = new Router(server)
